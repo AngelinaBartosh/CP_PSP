@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="content_area" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="740.0" style="-fx-background-color: #e9a453;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.CartController">
+    <children>
+        <TableView fx:id="cartTable" layoutX="80.0" layoutY="51.0" prefHeight="231.0" prefWidth="581.0" />
+        <Button layoutX="118.0" layoutY="302.0" mnemonicParsing="false" onMouseClicked="#clearCart" prefHeight="45.0" prefWidth="150.0" text="Очистить корзину">
+            <font>
+                <Font name="Cambria" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="deleteButton" layoutX="293.0" layoutY="302.0" mnemonicParsing="false" onMouseClicked="#deleteCartItem" prefHeight="45.0" prefWidth="150.0" text="Удалить выбранное">
+            <font>
+                <Font name="Cambria" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="466.0" layoutY="302.0" mnemonicParsing="false" onMouseClicked="#purchase" prefHeight="45.0" prefWidth="150.0" text="Купить">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="btn_close" layoutX="33.0" layoutY="561.0" mnemonicParsing="false" onAction="#closeCart" prefHeight="25.0" prefWidth="60.0" text="Назад" />
+        <Label fx:id="brandLabel" layoutX="325.0" layoutY="14.0" maxWidth="487.0" prefHeight="30.0" text="Корзина">
+            <font>
+                <Font name="Cambria" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="overallPriceField" layoutX="466.0" layoutY="356.0" maxWidth="487.0" prefHeight="30.0" prefWidth="200.0">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font>
+        </Label>
+      <TableView fx:id="myCartTable" layoutX="33.0" layoutY="421.0" prefHeight="131.0" prefWidth="674.0" />
+      <Button fx:id="showMyCar" layoutX="638.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#showMyCar" text="Показать" />
+      <Button fx:id="hideMyCar" layoutX="582.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#hideMyCar" text="Скрыть" />
+      <Label fx:id="purchesesLabel" layoutX="332.0" layoutY="397.0" text="Покупки">
+         <font>
+            <Font name="Cambria" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="845.0" style="-fx-background-color: #9acceb;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AdminController">
+    <center>
+        <AnchorPane fx:id="content_area" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="675.0" style="-fx-background-color: #b9ddef;" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="autoTable" layoutX="47.0" layoutY="40.0" prefHeight="168.0" prefWidth="582.0" />
+
+                <Label layoutX="48.0" layoutY="23.0" prefHeight="17.0" prefWidth="71.0" text="Автомобили" />
+                <Button layoutX="91.0" layoutY="758.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="28.0" prefWidth="66.0" text="Назад" />
+                <Button fx:id="btn_close" layoutX="16.0" layoutY="757.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="29.0" prefWidth="62.0" text="Выход" />
+            <Label layoutX="16.0" layoutY="211.0" prefHeight="17.0" prefWidth="49.0" text="Марка" />
+            <Label layoutX="80.0" layoutY="211.0" text="Модель" />
+            <Label layoutX="151.0" layoutY="211.0" text="Поколение" />
+            <Label layoutX="243.0" layoutY="211.0" text="Цена" />
+            <Label layoutX="302.0" layoutY="210.0" prefHeight="17.0" prefWidth="76.0" text="Трансмиссия" />
+            <Label layoutX="396.0" layoutY="211.0" text="Тип топлива" />
+            <Label layoutX="554.0" layoutY="211.0" text="Объем двигаетля" />
+            <TextField fx:id="brandField" layoutX="15.0" layoutY="230.0" prefHeight="26.0" prefWidth="54.0" promptText="Марка" />
+            <TextField fx:id="modelField" layoutX="79.0" layoutY="230.0" prefHeight="26.0" prefWidth="58.0" promptText="Модель" />
+            <TextField fx:id="generationField" layoutX="150.0" layoutY="230.0" prefHeight="26.0" prefWidth="82.0" promptText="Поколение" />
+            <TextField fx:id="priceField" layoutX="242.0" layoutY="230.0" prefHeight="26.0" prefWidth="50.0" promptText="Цена" />
+            <TextField fx:id="transmissionField" layoutX="302.0" layoutY="230.0" prefHeight="26.0" prefWidth="86.0" promptText="Трансписсия" />
+            <TextField fx:id="fuelField" layoutX="397.0" layoutY="230.0" prefHeight="26.0" prefWidth="86.0" promptText="Тип топлива" />
+            <TextField fx:id="yearField" layoutX="493.0" layoutY="230.0" prefHeight="26.0" prefWidth="53.0" promptText="Год" />
+            <TextField fx:id="volumeEField" layoutX="554.0" layoutY="230.0" prefHeight="26.0" prefWidth="105.0" promptText="Объем двигателя" />
+            <Button layoutX="569.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#addCar" prefHeight="30.0" prefWidth="90.0" text="Добавить" />
+            <Button layoutX="431.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#deleteCar" prefHeight="30.0" prefWidth="130.0" text="Удалить" />
+            <Label layoutX="496.0" layoutY="210.0" text="Год" />
+            <TableView fx:id="userTable" layoutX="47.0" layoutY="308.0" prefHeight="154.0" prefWidth="358.0">
+               <columns>
+                  <TableColumn fx:id="emailColumn" prefWidth="93.0" text="E-mail" />
+                  <TableColumn fx:id="usernameColumn" prefWidth="124.0" text="Имя пользователя" />
+                  <TableColumn fx:id="passwordColumn" prefWidth="73.0" text="Пароль" />
+                  <TableColumn fx:id="roleColumn" prefWidth="72.0" text="Роль" />
+               </columns></TableView>
+            <Button layoutX="428.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#addUser" prefHeight="30.0" prefWidth="130.0" text="Добавить" />
+            <Button layoutX="428.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#deleteUser" prefHeight="30.0" prefWidth="130.0" text="Удалить" />
+            <Label layoutX="15.0" layoutY="468.0" text="E-mail" />
+            <Label layoutX="80.0" layoutY="468.0" text="Имя пользователя" />
+            <Label layoutX="211.0" layoutY="468.0" prefHeight="17.0" prefWidth="59.0" text="Пароль" />
+            <Label layoutX="301.0" layoutY="468.0" text="Роль" />
+            <TextField fx:id="emailField" layoutX="13.0" layoutY="488.0" prefHeight="26.0" prefWidth="58.0" promptText="E-mail" />
+            <TextField fx:id="usernameField" layoutX="80.0" layoutY="488.0" prefHeight="26.0" prefWidth="120.0" promptText="Имя пользователя" />
+            <TextField fx:id="passwordField" layoutX="210.0" layoutY="488.0" prefHeight="26.0" prefWidth="80.0" promptText="Пароль" />
+            <TextField fx:id="roleField" layoutX="301.0" layoutY="488.0" prefHeight="26.0" prefWidth="63.0" promptText="Роль" />
+            <Button layoutX="554.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#updateCar" prefHeight="25.0" prefWidth="76.0" text="Обновить" />
+            <Label layoutX="47.0" layoutY="292.0" prefHeight="17.0" prefWidth="84.0" text="Пользователи" />
+            <Label layoutX="175.0" layoutY="5.0" text="Панель администатора">
+               <font>
+                  <Font name="Cambria Bold" size="29.0" />
+               </font>
+            </Label>
+            <Button fx:id="showDiagram" layoutX="578.0" layoutY="754.0" mnemonicParsing="false" onAction="#showDiagram" prefHeight="36.0" prefWidth="83.0" text="Диаграмма" />
+            <Button fx:id="editAuto" layoutX="292.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#editAuto" prefHeight="30.0" prefWidth="130.0" text="Редактировать" />
+            <Button fx:id="editUser" layoutX="428.0" layoutY="385.0" mnemonicParsing="false" onMouseClicked="#editUser" prefHeight="30.0" prefWidth="130.0" text="Редактировать" />
+            <TableView fx:id="userCarTable" layoutX="11.0" layoutY="571.0" prefHeight="153.0" prefWidth="656.0" />
+
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

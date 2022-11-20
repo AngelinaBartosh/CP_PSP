@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #5e5e5e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.LoginController">
+    <center>
+        <AnchorPane fx:id="content_area" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="399.0" style="-fx-background-color: #e9a453;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="usernameField" layoutX="110.0" layoutY="108.0" prefHeight="40.0" prefWidth="200.0" promptText="Имя пользователя">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <PasswordField fx:id="passwordField" layoutX="110.0" layoutY="185.0" prefHeight="40.0" prefWidth="200.0" promptText="Пароль">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </PasswordField>
+                <Text fill="#3c3c3c" layoutX="96.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Авторизация">
+                    <font>
+                        <Font name="Cambria Bold" size="36.0" />
+                    </font>
+                </Text>
+                <Button layoutX="130.0" layoutY="244.0" mnemonicParsing="false" onAction="#loginUser" prefHeight="68.0" prefWidth="161.0" text="Вход">
+                    <font>
+                        <Font name="Cambria" size="36.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button layoutX="200.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#openRegister" prefHeight="31.0" prefWidth="101.0" text="Регистрация">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="Cambria" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn_close" layoutX="123.0" layoutY="346.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="22.0" prefWidth="63.0" text="Выход">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+                <Label layoutX="112.0" layoutY="88.0" prefHeight="20.0" prefWidth="108.0" text="Имя пользователя" />
+                <Label layoutX="112.0" layoutY="165.0" prefHeight="20.0" prefWidth="100.0" text="Пароль" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

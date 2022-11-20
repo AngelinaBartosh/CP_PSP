@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #5e5e5e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.RegisterController">
+    <center>
+        <AnchorPane fx:id="content_area" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="390.0" style="-fx-background-color: #e9a453;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <TextField fx:id="usernameField" layoutX="90.0" layoutY="94.0" prefHeight="40.0" prefWidth="215.0" promptText="Имя пользователя">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <TextField fx:id="emailField" layoutX="90.0" layoutY="159.0" prefHeight="40.0" prefWidth="215.0" promptText="Email">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <PasswordField fx:id="passwordField" layoutX="90.0" layoutY="219.0" prefHeight="40.0" prefWidth="215.0" promptText="Пароль">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </PasswordField>
+                <PasswordField fx:id="confirmPasswordField" layoutX="89.0" layoutY="279.0" prefHeight="40.0" prefWidth="215.0" promptText="Повторите пароль">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </PasswordField>
+                <Button layoutX="108.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#registerUser" prefHeight="54.0" prefWidth="175.0" text="Зарегистрироваться">
+                    <font>
+                        <Font name="Cambria" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Text fill="#3c3c3c" layoutX="86.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация">
+                    <font>
+                        <Font name="Cambria Bold" size="36.0" />
+                    </font>
+                </Text>
+                <Button layoutX="121.0" layoutY="418.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="25.0" prefWidth="66.0" text="Назад" />
+                <Button fx:id="btn_close" layoutX="208.0" layoutY="418.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="25.0" prefWidth="62.0" text="Выход" />
+                <Label layoutX="90.0" layoutY="74.0" prefHeight="20.0" prefWidth="113.0" text="Имя пользователя" />
+                <Label layoutX="90.0" layoutY="139.0" prefHeight="20.0" prefWidth="100.0" text="E-mail" />
+                <Label layoutX="90.0" layoutY="199.0" prefHeight="20.0" prefWidth="100.0" text="Пароль" />
+                <Label layoutX="90.0" layoutY="259.0" prefHeight="20.0" prefWidth="115.0" text="Повторите пароль" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
